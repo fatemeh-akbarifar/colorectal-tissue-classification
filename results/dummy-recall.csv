@@ -1,0 +1,10 @@
+label,class,count,recall
+0,Adipose,1338,1.0
+1,Background,847,0.0
+2,Debris,339,0.0
+3,Lymphocytes,634,0.0
+4,Mucus,1035,0.0
+5,Smooth muscle,592,0.0
+6,Normal mucosa,741,0.0
+7,Stroma,421,0.0
+8,Tumour epithelium,1233,0.0

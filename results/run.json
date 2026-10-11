@@ -1,0 +1,33 @@
+{
+  "dataset_url": "https://zenodo.org/records/10519652/files/pathmnist_64.npz?download=1",
+  "publisher_md5": "55aa9c1e0525abe5a6b9d8343a507616",
+  "sha256": "1e7fc200dd5aac79f39f0da26178be801ffac8e6d59c8533e51acebae953745a",
+  "licence": "CC BY 4.0",
+  "resolution": 64,
+  "train_count": 9000,
+  "validation_count": 1800,
+  "test_count": 7180,
+  "excluded_train_val_images": 0,
+  "test_duplicate_count": 0,
+  "selected_epoch": 8,
+  "epochs_run": 8,
+  "seed": 42,
+  "python": "3.9.13",
+  "torch": "2.8.0",
+  "numpy": "1.23.5",
+  "source_sha256": "ed2e1b2fe2a930474b4c9017db714c491f6bf74c5e2cfe5dbad1a5d4d57e1a33",
+  "test_use": "Once after model freeze",
+  "top_confusions": [
+    {
+      "count": 272,
+      "true": "Normal mucosa",
+      "predicted": "Tumour epithelium"
+    },
+    {
+      "count": 236,
+      "true": "Smooth muscle",
+      "predicted": "Debris"
+    }
+  ],
+  "feature_correct_cnn_wrong_count": 1460
+}

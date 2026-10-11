@@ -1,0 +1,9 @@
+# Tissue-pattern comparison
+
+Use PathMNIST 64 RGB, official train/validation/test split. Verify publisher MD5 55aa9c1e0525abe5a6b9d8343a507616. Audit all image hashes before fitting; preserve the complete official test set, exclude matching training and validation images, and exclude validation matches to any training image. Retain one copy per hash within each training/validation split. Record exclusions before sampling. This checks exact content, not patient independence.
+
+Seed 42: select 1,000 training and up to 200 validation patches per class after exclusions. Fit a most-frequent dummy, an 18-feature standardised L2 logistic model (C=1, max_iter=1000), and a CNN with channels 16/32/64, two max pools, global average pool and nine logits. Features: RGB mean/SD (6), uniform LBP P=8/R=1 histogram (10), grayscale entropy and mean Sobel magnitude (2). Scale RGB to [0,1]; grayscale for LBP is uint8.
+
+CNN: seed 42, Adam 0.001, batches 64, eight epochs maximum, 60-minute total training cap. No augmentation. Select highest validation macro F1; ties retain earlier epoch. Stop only at epoch boundaries and record elapsed time. Freeze all models before evaluating the official test set once. Primary metric macro F1; balanced accuracy, per-class recall and confusion matrices supplement it. No patient-level uncertainty intervals without group IDs.
+
+Choose the two largest CNN off-diagonal confusion cells after final evaluation, ties by class order. Display up to six mistakes and three correct examples of each involved class (seed 123), plus an example where the feature model is correct and CNN is wrong. Explanations are visual hypotheses, not relabelling or clinical judgements. Data images: CC BY 4.0, attribution in README and figure captions. This is tissue-category classification, not patient diagnosis or survival prediction.

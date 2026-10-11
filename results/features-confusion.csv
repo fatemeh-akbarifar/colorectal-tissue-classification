@@ -1,0 +1,10 @@
+,Adipose,Background,Debris,Lymphocytes,Mucus,Smooth muscle,Normal mucosa,Stroma,Tumour epithelium
+Adipose,1267,2,1,0,10,57,1,0,0
+Background,0,847,0,0,0,0,0,0,0
+Debris,0,0,159,0,0,169,0,2,9
+Lymphocytes,2,0,4,617,0,0,4,2,5
+Mucus,4,3,0,0,1007,1,9,5,6
+Smooth muscle,0,0,40,0,0,336,0,149,67
+Normal mucosa,1,0,5,18,27,4,661,0,25
+Stroma,0,3,39,1,11,65,12,241,49
+Tumour epithelium,4,12,23,3,8,41,95,36,1011
